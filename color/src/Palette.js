@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import "rc-slider/assets/index.css";
 import "./Palette.css";
-import Slider, { Range } from "rc-slider";
 import NavBar from "./NavBar";
 
 export default class Palette extends Component {
