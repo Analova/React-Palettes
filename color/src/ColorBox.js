@@ -68,7 +68,3 @@ class ColorBox extends Component {
 }
 
 export default withStyles(styles)(ColorBox);
-
-{
-  /* className={`copy-overlay ${copied && "show"}`} */
-}

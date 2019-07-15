@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import "rc-slider/assets/index.css";
 import Slider, { Range } from "rc-slider";
 import Select from "@material-ui/core/Select";
