@@ -145,7 +145,7 @@ class NewPaletteForm extends Component {
                 color="secondary"
                 onClick={this.clearColors}
               >
-                Clear Palette
+                Clear A Palette
               </Button>
               <Button
                 className={classes.button}
