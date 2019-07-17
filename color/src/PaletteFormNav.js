@@ -49,9 +49,10 @@ const styles = theme => ({
 class PaletteFormNav extends Component {
   constructor(props) {
     super(props);
-    this.state = { newPaletteName: "", formIsShowing: false };
+    this.state = { newPaletteName: "", showingForm: false };
     this.handleChange = this.handleChange.bind(this);
-    this.formIsShowing = this.formIsShowing.bind(this);
+    this.showFrom = this.showFrom.bind(this);
+    this.hideForm = this.hideForm.bind(this);
   }
 
   handleChange(evt) {
@@ -60,9 +61,14 @@ class PaletteFormNav extends Component {
     });
   }
 
-  formIsShowing() {
-    this.setState({ formIsShowing: true });
+  showFrom() {
+    this.setState({ showingForm: true });
   }
+
+  hideForm() {
+    this.setState({ showingForm: false });
+  }
+
   render() {
     const { classes, open, palettes, handleSubmit } = this.props;
     const { newPaletteName } = this.state;
@@ -103,14 +109,18 @@ class PaletteFormNav extends Component {
               className={classes.button}
               variant="contained"
               color="primary"
-              onClick={this.formIsShowing}
+              onClick={this.showFrom}
             >
               Save
             </Button>
           </div>
         </AppBar>
-        {this.state.formIsShowing && (
-          <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} />
+        {this.state.showingForm && (
+          <PaletteMetaForm
+            palettes={palettes}
+            handleSubmit={handleSubmit}
+            hideForm={this.hideForm}
+          />
         )}
       </div>
     );
