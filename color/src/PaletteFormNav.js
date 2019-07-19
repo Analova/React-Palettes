@@ -11,7 +11,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
 import PaletteMetaForm from "./PaletteMetaForm";
 import styles from "./styles/PaletteFormNavStyles";
-import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
 class PaletteFormNav extends Component {
   constructor(props) {
@@ -38,7 +37,8 @@ class PaletteFormNav extends Component {
 
   render() {
     const { classes, open, palettes, handleSubmit } = this.props;
-    const { newPaletteName } = this.state;
+    const { showingForm } = this.state;
+
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -82,7 +82,7 @@ class PaletteFormNav extends Component {
             </Button>
           </div>
         </AppBar>
-        {this.state.showingForm && (
+        {showingForm && (
           <PaletteMetaForm
             palettes={palettes}
             handleSubmit={handleSubmit}
