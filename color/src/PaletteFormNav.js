@@ -12,6 +12,7 @@ import Button from "@material-ui/core/Button";
 import PaletteMetaForm from "./PaletteMetaForm";
 import styles from "./styles/PaletteFormNavStyles";
 
+
 class PaletteFormNav extends Component {
   constructor(props) {
     super(props);
