@@ -1,1 +1,1 @@
-A clone of websites like Flat UI Colors and Material UI Colors.
+A clone of websites like https://flatuicolors.com/   and Material UI Colors.
